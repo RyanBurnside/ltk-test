@@ -20,10 +20,10 @@
   "Creates a closure for a Button's callback without adding baggage to the
    Button itself"
   (lambda ()
-	(format *standard-output*
-			"~&You clicked Button (~a, ~a)"
-			x
-			y)))
+    (format *standard-output*
+            "~&You clicked Button (~a, ~a)"
+            x
+            y)))
 
 (defun run-demo ()
   (with-ltk ()
@@ -31,17 +31,17 @@
     (set-geometry *tk* *window-width* *window-height* 0 0)
 
     (let* ((sw (make-instance 'scrolled-frame :master *tk*))
-		   (l (make-instance 'label
-							 :text "Click a button and it'll echo to REPL")))
-	  (pack l)
-	  
+           (l (make-instance 'label
+                             :text "Click a button and it'll echo to REPL")))
+      (pack l)
+
       (dotimes (row *down*)
         (dotimes (column *across*)
           (let* ((b (make-instance 'button
                                    :master  (ltk:interior sw)
                                    :text (format nil "(~a,~a)" column row)
-								   :command (make-button-callback column row))))
-			
+                                   :command (make-button-callback column row))))
+
             (grid b column row))))
       (pack sw :fill :both :expand t))))
 

@@ -8,4 +8,3 @@
   :serial t
   :components ((:file "package")
                (:file "ltk-test")))
-
