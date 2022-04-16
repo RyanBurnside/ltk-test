@@ -19,4 +19,4 @@ Note, this needs to be done outside emacs from a terminal.
                    :executable t)
 ```
 This will build a binary called ltk-test wherever your terminal was called from.
-You will still need to add the libraries required by LTK.
+You will still need to add the OS libraries required by LTK.
