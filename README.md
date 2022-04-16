@@ -1,4 +1,8 @@
 
+Note:
+Be sure you clone this project to your ~/quicklisp/local-projects/ directory.
+This way it'll be found when quicklisp looks for projects.
+
 Loading (Assumes you have installed quicklisp and made it auto start with SBCL)
 ```
 (ql:quickload "ltk-test")
