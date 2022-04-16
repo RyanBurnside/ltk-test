@@ -1,16 +1,19 @@
 
 Note:
 Be sure you clone this project to your ~/quicklisp/local-projects/ directory.
+
 This way it'll be found when quicklisp looks for projects.
 
 Loading (Assumes you have installed quicklisp and made it auto start with SBCL)
+You will probably do this after SLIME starts.
 ```
 (ql:quickload "ltk-test")
 (in-package :ltk-test)
 (run-demo)
 ```
 
-Building an executable
+Building an executable:
+
 Note, this needs to be done outside emacs from a terminal.
 1. start sbcl in a terminal
 
