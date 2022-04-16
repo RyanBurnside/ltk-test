@@ -20,7 +20,7 @@ Note, this needs to be done outside emacs from a terminal.
 ```
 (ql:quickload "ltk-test")
 (save-lisp-and-die "ltk-test"
-                   :toplevel #':ltk-test:run-demo
+                   :toplevel #'ltk-test:run-demo
                    :executable t)
 ```
 This will build a binary called ltk-test wherever your terminal was called from.
