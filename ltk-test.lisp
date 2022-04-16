@@ -24,6 +24,7 @@
                        x
                        y)))
       (print msg)
+      (finish-output)
       (do-msg msg))))
 
 
