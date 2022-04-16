@@ -2,7 +2,6 @@
 
 
 (in-package #:ltk-test)
-(in-package #:ltk)
 
 ;;; "ltk-test" goes here. Hacks and glory await!
 
@@ -13,6 +12,7 @@
 (defparameter *window-height* 240)
 (defparameter *across* 10)
 (defparameter *down* 10)
+
 
 ;; Build a box of buttons in a scrolled frame
 
@@ -45,4 +45,3 @@
             (grid b column row))))
       (pack sw :fill :both :expand t))))
 
-;; (run-demo)
