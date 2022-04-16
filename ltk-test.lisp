@@ -1,11 +1,10 @@
 ;;;; ltk-template.lisp
 
-
 (in-package #:ltk-test)
 
 ;;; "ltk-test" goes here. Hacks and glory await!
 
-;; Special variables to hold width and height
+;; Special symbols to hold width and height
 ;; parameters can reload variables can't
 
 (defparameter *window-width* 320)
@@ -20,10 +19,13 @@
   "Creates a closure for a Button's callback without adding baggage to the
    Button itself"
   (lambda ()
-    (format *standard-output*
-            "~&You clicked Button (~a, ~a)"
-            x
-            y)))
+    (let ((msg (format nil
+                       "~&You clicked Button (~a, ~a)"
+                       x
+                       y)))
+      (print msg)
+      (do-msg msg))))
+
 
 (defun run-demo ()
   (with-ltk ()
@@ -44,4 +46,3 @@
 
             (grid b column row))))
       (pack sw :fill :both :expand t))))
-
